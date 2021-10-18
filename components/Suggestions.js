@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import faker  from "faker";
 function Suggestions() {
     const [suggestions, setSuggestions] = useState();
-    console.log(suggestions)
+    console.log('sess: ',suggestions)
    
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function Suggestions() {
             </div>
 
             {
-                suggestions.map(profile => (
+                suggestions?.map(profile => (
                     <div key={profile.id} className="flex item-center justify-between mt-3">
                         <img className="w-10 h-10 rounded-full border p-[2px]" src={profile.avatar} alt=""/>
                         <div className="flex-1 ml-4">
